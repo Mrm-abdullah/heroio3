@@ -4,6 +4,7 @@ import Root from '../components/Root';
 import Home from '../pages/Home/Home';
 import App from '../App';
 import Installation from '../pages/Installation/Installation';
+import PageNotFound from '../pages/PageNotFound/PageNotFound';
 
 const router = createBrowserRouter([
   {
@@ -13,22 +14,7 @@ const router = createBrowserRouter([
       { index: true, Component: Home },
       { path: "app", Component: App },
       { path: "installation", Component: Installation },
-    //   {
-    //     path: "auth",
-    //     Component: AuthLayout,
-    //     children: [
-    //       { path: "login", Component: Login },
-    //       { path: "register", Component: Register },
-    //     ],
-    //   },
-    //   {
-    //     path: "concerts",
-    //     children: [
-    //       { index: true, Component: ConcertsHome },
-    //       { path: ":city", Component: ConcertsCity },
-    //       { path: "trending", Component: ConcertsTrending },
-    //     ],
-    //   },
+      { path: "404", Component: PageNotFound },
     ],
   },
 ]);
