@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter } from "react-router"
 import Root from '../components/Root';
 import Home from '../pages/Home/Home';
+import App from '../App';
 
 const router = createBrowserRouter([
   {
@@ -9,7 +10,7 @@ const router = createBrowserRouter([
     element: <Root></Root>,
     children: [
       { index: true, Component: Home },
-    //   { path: "about", Component: About },
+      { path: "app", Component: App },
     //   {
     //     path: "auth",
     //     Component: AuthLayout,

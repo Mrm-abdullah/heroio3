@@ -4,8 +4,8 @@ import logo from '../../assets/logo.png'
 
 const Navbar = () => {
     const navbar = <>
-        <li><NavLink><i class="fa-regular fa-house"></i> Home</NavLink></li>
-        <li><NavLink><i class="fa-brands fa-app-store"></i> Apps</NavLink></li>
+        <li><NavLink to={`/`}><i class="fa-regular fa-house"></i> Home</NavLink></li>
+        <li><NavLink to={`/app`}><i class="fa-brands fa-app-store"></i> Apps</NavLink></li>
         <li><NavLink><i class="fa-regular fa-circle-down"></i> Installation</NavLink></li>
     </>
     return (
