@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router"
 import Root from '../components/Root';
 import Home from '../pages/Home/Home';
 import App from '../App';
+import Installation from '../pages/Installation/Installation';
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, Component: Home },
       { path: "app", Component: App },
+      { path: "installation", Component: Installation },
     //   {
     //     path: "auth",
     //     Component: AuthLayout,
