@@ -21,18 +21,18 @@
 #### Header
 
 - The header must include:
-  - A logo.on clicking it user will be navigated to home page.
-  - A navigation bar with links [ `home` , `apps` , `installation` ] and active route indication.
-  - A `Contribution` button as Figma linking to the your GitHub profile.
+  - A logo.on clicking it user will be navigated to home page. --- done
+  - A navigation bar with links [ `home` , `apps` , `installation` ] and active route indication. --- done
+  - A `Contribution` button as Figma linking to the your GitHub profile. --- done 
 
 #### Footer
 
-- Design a custom footer using your own creativity and style.
+- Design a custom footer using your own creativity and style. --- done
 
 #### Data
 
 - Create an JSON Array of minimum 12-20 objects for app data using the following structure:
-  ```js
+  ```js -- done
   {
     image: string;
     title: string;
@@ -59,9 +59,9 @@
 
 #### Banner
 
-- Must contain a center-aligned heading, text, and two buttons.
-- “App Store” button will redirect to the App Store.
-- “Play Store” button will redirect to the Play Store.
+- Must contain a center-aligned heading, text, and two buttons. --- done 
+- “App Store” button will redirect to the App Store. --- done 
+- “Play Store” button will redirect to the Play Store. --- done 
 
 #### States Section
 
@@ -69,8 +69,8 @@
 
 #### Top Apps Section
 
-- Display eight apps in a four-column layout.
-- Each app card should display:
+- Display eight apps in a four-column layout. --- done 
+- Each app card should display: --- done
   - App title
   - Image
   - Download count
@@ -189,7 +189,7 @@
 
 ## 🔗 Submission Guideline
 
-- **Live Link :** YOUR_DEPLOYED_URL_HERE
+- **Live Link :** https://meek-pie-990e16.netlify.app
 - **GitHub Repository:** https://github.com/Mrm-abdullah/heroio3
 
 

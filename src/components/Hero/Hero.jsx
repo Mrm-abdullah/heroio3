@@ -13,14 +13,14 @@ const Hero = () => {
                             At HERO.IO , we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. Our goal is to turn your ideas into digital experiences that truly make an impact
                         </p>
                         <div className=''>
-                            <Link className="btn btn-wide mr-8 text-2xl p-6"> <i class="fa-brands fa-google-play"></i> Google Play</Link>
-                            <Link className="btn btn-wide text-2xl p-6"> <i class="fa-brands fa-app-store"></i> App Store</Link>
+                            <Link to={`https://play.google.com/store/apps?hl=en`} target='_blank' className="btn btn-wide mr-8 text-2xl p-6"> <i className="fa-brands fa-google-play"></i> Google Play</Link>
+                            <Link to={`https://www.apple.com/app-store/`} target='_blank' className="btn btn-wide text-2xl p-6"> <i className="fa-brands fa-app-store"></i> App Store</Link>
                         </div>
                     </div>
                 </div>
             </div>
             <div className='hero max-w-7xl mx-auto'>
-                <img src={hero} alt="" srcset="" />
+                <img src={hero} alt="" srcSet="" />
             </div>
             <div className='bg-primary'>
                 <div className="card bg-primary text-primary-content max-w-7xl mx-auto py-12">
