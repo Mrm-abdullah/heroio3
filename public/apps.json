@@ -6,7 +6,7 @@
     "id": 1,
     "description": "Connect with friends and the world around you.",
     "size": 75,
-    "reviews": 1200000,
+    "reviews": 12,
     "ratingAvg": 4.2,
     "downloads": "5M",
     "ratings": [
@@ -24,7 +24,7 @@
     "id": 2,
     "description": "Share photos and videos with friends.",
     "size": 65,
-    "reviews": 950000,
+    "reviews": 95,
     "ratingAvg": 4.5,
     "downloads": "3M",
     "ratings": [
@@ -42,7 +42,7 @@
     "id": 3,
     "description": "Simple, reliable messaging and calling app.",
     "size": 45,
-    "reviews": 2000000,
+    "reviews": 20,
     "ratingAvg": 4.6,
     "downloads": "5M",
     "ratings": [
@@ -60,7 +60,7 @@
     "id": 4,
     "description": "Stay updated with trending topics.",
     "size": 55,
-    "reviews": 600000,
+    "reviews": 60,
     "ratingAvg": 4.1,
     "downloads": "1M",
     "ratings": [
@@ -78,7 +78,7 @@
     "id": 5,
     "description": "Online shopping made easy.",
     "size": 80,
-    "reviews": 800000,
+    "reviews": 80,
     "ratingAvg": 4.4,
     "downloads": "1M",
     "ratings": [
@@ -96,7 +96,7 @@
     "id": 6,
     "description": "Watch movies and TV shows anytime.",
     "size": 90,
-    "reviews": 700000,
+    "reviews": 70,
     "ratingAvg": 4.3,
     "downloads": "1M",
     "ratings": [
@@ -114,7 +114,7 @@
     "id": 7,
     "description": "Stream millions of songs.",
     "size": 70,
-    "reviews": 850000,
+    "reviews": 85,
     "ratingAvg": 4.5,
     "downloads": "1M",
     "ratings": [
@@ -132,7 +132,7 @@
     "id": 8,
     "description": "Navigation and maps service.",
     "size": 60,
-    "reviews": 1100000,
+    "reviews": 11,
     "ratingAvg": 4.7,
     "downloads": "5M",
     "ratings": [
@@ -150,7 +150,7 @@
     "id": 9,
     "description": "Watch and share videos.",
     "size": 95,
-    "reviews": 2500000,
+    "reviews": 25,
     "ratingAvg": 4.7,
     "downloads": "10M",
     "ratings": [
@@ -168,7 +168,7 @@
     "id": 10,
     "description": "Fast and secure web browser.",
     "size": 85,
-    "reviews": 1400000,
+    "reviews": 14,
     "ratingAvg": 4.6,
     "downloads": "10M",
     "ratings": [
@@ -186,7 +186,7 @@
     "id": 11,
     "description": "Short-form video platform.",
     "size": 88,
-    "reviews": 1800000,
+    "reviews": 18,
     "ratingAvg": 4.4,
     "downloads": "3M",
     "ratings": [
@@ -204,7 +204,7 @@
     "id": 12,
     "description": "Fast and secure messaging app.",
     "size": 50,
-    "reviews": 900000,
+    "reviews": 90,
     "ratingAvg": 4.6,
     "downloads": "10M",
     "ratings": [
@@ -222,7 +222,7 @@
     "id": 13,
     "description": "Professional networking platform.",
     "size": 78,
-    "reviews": 650000,
+    "reviews": 65,
     "ratingAvg": 4.3,
     "downloads": "10M",
     "ratings": [
@@ -240,7 +240,7 @@
     "id": 14,
     "description": "Spreadsheet and data analysis tool.",
     "size": 110,
-    "reviews": 500000,
+    "reviews": 50,
     "ratingAvg": 4.5,
     "downloads": "5M",
     "ratings": [
@@ -258,7 +258,7 @@
     "id": 15,
     "description": "Community discussions and forums.",
     "size": 68,
-    "reviews": 400000,
+    "reviews": 40,
     "ratingAvg": 4.2,
     "downloads": "5M",
     "ratings": [
@@ -276,7 +276,7 @@
     "id": 16,
     "description": "Create and edit documents easily.",
     "size": 105,
-    "reviews": 450000,
+    "reviews": 45,
     "ratingAvg": 4.5,
     "downloads": "5M",
     "ratings": [
@@ -294,7 +294,7 @@
     "id": 17,
     "description": "Email service by Google.",
     "size": 70,
-    "reviews": 1300000,
+    "reviews": 13,
     "ratingAvg": 4.6,
     "downloads": "10M",
     "ratings": [
@@ -312,7 +312,7 @@
     "id": 18,
     "description": "Cloud storage and file sharing.",
     "size": 65,
-    "reviews": 1000000,
+    "reviews": 10,
     "ratingAvg": 4.6,
     "downloads": "5M",
     "ratings": [
@@ -330,7 +330,7 @@
     "id": 19,
     "description": "Backup and organize photos.",
     "size": 60,
-    "reviews": 900000,
+    "reviews": 90,
     "ratingAvg": 4.5,
     "downloads": "5M",
     "ratings": [
@@ -348,7 +348,7 @@
     "id": 20,
     "description": "Manage your schedule and events.",
     "size": 55,
-    "reviews": 600000,
+    "reviews": 60,
     "ratingAvg": 4.4,
     "downloads": "10M",
     "ratings": [
