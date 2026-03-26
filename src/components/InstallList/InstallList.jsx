@@ -8,7 +8,7 @@ const InstallList = ({app, handleUninstallApp}) => {
                 <div>
                     <div>{app.title}</div>
                     <div className="text-xs uppercase font-semibold opacity-60 pt-2">
-                        <span className='rounded-xl text-green-500 mr-2'><i className="fa-solid fa-download"></i>{app.downloads} </span>
+                        <span className='rounded-xl text-green-500 mr-2'><i className="fa-solid fa-download"></i>{app.downloads}M </span>
                         <span className='text-[#FF8811] rounded-xl mr-2'><i className="fa-solid fa-star"></i>{app.ratingAvg} </span>
                         <span>{app.size} MB</span>
                     </div>

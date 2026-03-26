@@ -20,6 +20,16 @@ const Installation = () => {
         // console.log(newInstallAppList)
         toast('Uninstall Successful')
     }
+    const sortHighToLow = () => {
+        const sorted = [...installAppList].sort((a, b) => b.downloads - a.downloads);
+        setInstallAppList(sorted);
+        // console.log(sorted)
+    };
+    const sortLowToHigh = () => {
+        const sorted = [...installAppList].sort((a, b) => a.downloads - b.downloads);
+        setInstallAppList(sorted);
+        // console.log(sorted) 
+    };
     return (
         <div className='bg-gray-100'>
             <div className="card max-w-5xl mx-auto py-4">
@@ -36,8 +46,8 @@ const Installation = () => {
                     <details className="dropdown">
                     <summary className="btn m-1">Sort By Size <i className="fa-solid fa-sort-down text-xl -mt-2"></i></summary>
                     <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                        <li><a>Low to High</a></li>
-                        <li><a>High to Low</a></li>
+                        <li onClick={() => sortHighToLow()}><a>High-Low</a></li>
+                        <li onClick={() => sortLowToHigh()}><a>Low-High</a></li>
                     </ul>
                     </details>
                 </div>
@@ -46,7 +56,7 @@ const Installation = () => {
                 <ul className="list rounded-box shadow-md">
 
                     {
-                        selectedApps.map((app) => <InstallList app={app} key={app.id} handleUninstallApp={handleUninstallApp}></InstallList>)
+                        installAppList.map((app) => <InstallList app={app} key={app.id} handleUninstallApp={handleUninstallApp}></InstallList>)
                     }
 
                 </ul>
