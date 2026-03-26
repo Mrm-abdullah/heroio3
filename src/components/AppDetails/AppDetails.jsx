@@ -13,7 +13,7 @@ const AppDetails = () => {
     // console.log(installApp)
     const [install, setInstall] = useState(installApp || [])
     const a = install.find(a => parseInt(a) === parseInt(id))
-    console.log(install)
+    // console.log(install)
 
 
     const handleInstallApp = (id) => {
