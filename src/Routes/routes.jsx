@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { createBrowserRouter } from "react-router"
 import Root from '../components/Root';
 import Home from '../pages/Home/Home';
@@ -12,11 +12,30 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root></Root>,
     children: [
-      { index: true, loader: () => fetch('apps.json'), Component: Home },
-      { path: "/app", loader: () => fetch('apps.json'), Component: AllApps },
-      { path: "/appDetails/:id", loader: () => fetch('apps.json'), Component: AppDetails },
-      { path: "/installation", Component: Installation },
-      { path: "404", Component: PageNotFound },
+      { 
+        index: true, 
+        loader: () => fetch('apps.json'), 
+        element: <Suspense fallback={`load hocce vai`}><Home></Home></Suspense>
+      },
+      { 
+        path: "/app", 
+        loader: () => fetch('apps.json'), 
+        element: <Suspense fallback={`load hocce vai`}><AllApps></AllApps></Suspense>
+      },
+      { 
+        path: "/appDetails/:id", 
+        loader: () => fetch('apps.json'), 
+        element: <Suspense fallback={`load hocce vai`}><AppDetails></AppDetails></Suspense>
+      },
+      { 
+        path: "/installation", 
+        loader: () => fetch('apps.json'), 
+        element: <Suspense fallback={`load hocce vai`}><Installation></Installation></Suspense>
+      },
+      { 
+        path: "404", 
+        Component: PageNotFound 
+      },
     ],
   },
 ]);

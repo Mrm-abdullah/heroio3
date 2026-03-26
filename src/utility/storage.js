@@ -1,4 +1,4 @@
-const getAppFormLocalStorage = () => {
+const getAppFromLocalStorage = () => {
     const storeAppString = localStorage.getItem('app');
 
     if (storeAppString) {
@@ -9,7 +9,8 @@ const getAppFormLocalStorage = () => {
 }
 
 const addAppToLocalStorage = (id) => {
-    const app = getAppFormLocalStorage();
+    const app = getAppFromLocalStorage();
+    if (app.includes(id)) return;
     const newApps = [...app, id]
     saveAppToLocalStorage(newApps);
 }
@@ -21,10 +22,9 @@ const saveAppToLocalStorage = (app) => {
 }
 
 
-
-const removeAppFormLocalStorage = (id) => {
-    const storeApp = getAppFormLocalStorage();
-    const remainingApp = storeApp.filter((storeId) => storeId !== id);
+const removeAppFromLocalStorage = (id) => {
+    const storeApp = getAppFromLocalStorage();
+    const remainingApp = storeApp.filter((storeId) => parseInt(storeId) !== parseInt(id));
     saveAppToLocalStorage(remainingApp)
 }
-export {getAppFormLocalStorage, addAppToLocalStorage, removeAppFormLocalStorage}
+export {getAppFromLocalStorage, addAppToLocalStorage, removeAppFromLocalStorage}

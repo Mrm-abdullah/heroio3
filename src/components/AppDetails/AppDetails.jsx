@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
-import { addAppToLocalStorage } from '../../utility/storage';
+import { addAppToLocalStorage, getAppFromLocalStorage } from '../../utility/storage';
 
 const AppDetails = () => {
     const {id} = useParams()
     const data = useLoaderData()
     const singleApp = data.find(app => app.id === parseInt(id))
     // console.log(singleApp)
+    const installApp = getAppFromLocalStorage()
+    // console.log(installApp)
+    const [install, setInstall] = useState([...installApp])
+    const a = install.find(a => a === id)
+
     const handleInstallApp = (id) => {
-        // console.log(id)
         addAppToLocalStorage(id)
+        const store = [...install, id]
+        setInstall(store)
+        alert(" added")
     }
     return (
         <div className='bg-gray-100'>
@@ -35,12 +42,14 @@ const AppDetails = () => {
                                 <h3 className='text-4xl font-bold'>{singleApp.ratingAvg}</h3>
                             </div>
                             <div>
-                                <i class="fa-regular fa-thumbs-up text-4xl text-primary"></i>
+                                <i className="fa-regular fa-thumbs-up text-4xl text-primary"></i>
                                 <p className='py-1'>Total Reviews</p>
                                 <h3 className='text-4xl font-bold'>{singleApp.reviews}K</h3>
                             </div>
                         </div>
-                        <button onClick={() => handleInstallApp(id)} className='btn btn-success mt-12'>Install Now ({singleApp.size} MB)</button>
+                        {
+                            a ? <button disabled className='btn btn-success mt-12'>Installed</button> : <button onClick={() => handleInstallApp(id)} className='btn btn-success mt-12'>Install Now ({singleApp.size} MB)</button>
+                        }
                     </div>
                 </div>
                 <div className='divider'></div> 

@@ -1,6 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { getAppFromLocalStorage, removeAppFromLocalStorage } from '../../utility/storage';
+import InstallList from '../../components/InstallList/InstallList';
+import { useLoaderData } from 'react-router';
 
 const Installation = () => {
+    const data = useLoaderData()
+    const installList = getAppFromLocalStorage()
+    const selectedApps = data.filter(app => installList.includes(String(app.id)))
+    const [installAppList, setInstallAppList] = useState([...selectedApps])
+
+    // console.log(selectedApps)
+    const handleUninstallApp = (id) => {
+        // console.log(id)
+        const newInstallAppList = installAppList.filter(app => parseInt(app.id) !== id)
+        removeAppFromLocalStorage(id)
+        setInstallAppList(newInstallAppList)
+        // console.log(newInstallAppList)
+    }
     return (
         <div className='bg-gray-100'>
             <div className="card max-w-5xl mx-auto py-4">
@@ -11,11 +27,11 @@ const Installation = () => {
             </div>
             <div className='flex justify-between max-w-7xl mx-auto py-4'>
                 <div>
-                    <p className='font-semibold text-xl'>1 Apps Found</p>
+                    <p className='font-semibold text-xl'> {selectedApps.length} Apps Found</p>
                 </div>
                 <div>
                     <details className="dropdown">
-                    <summary className="btn m-1">Sort By Size <i class="fa-solid fa-sort-down text-xl -mt-2"></i></summary>
+                    <summary className="btn m-1">Sort By Size <i className="fa-solid fa-sort-down text-xl -mt-2"></i></summary>
                     <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
                         <li><a>Low to High</a></li>
                         <li><a>High to Low</a></li>
@@ -25,62 +41,11 @@ const Installation = () => {
             </div>
             <div className='max-w-7xl mx-auto pb-16'>
                 <ul className="list rounded-box shadow-md">
-  
-                                        
-                    <li className="list-row bg-base-100 my-1">
-                        <div><img className="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
-                        <div>
-                            <div>Forest: Focus for Productivity</div>
-                            <div className="text-xs uppercase font-semibold opacity-60 pt-2">
-                                <span className='rounded-xl text-green-500 mr-2'><i class="fa-solid fa-download"></i> 9M</span>
-                                <span className='text-[#FF8811] rounded-xl mr-2'><i class="fa-solid fa-star"></i> 5</span>
-                                <span>258 MB</span>
-                            </div>
-                        </div>
-                        <button className="btn btn-success">Uninstall
-                        </button>
-                    </li>
-                    <li className="list-row bg-base-100 my-1">
-                        <div><img className="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
-                        <div>
-                            <div>Forest: Focus for Productivity</div>
-                            <div className="text-xs uppercase font-semibold opacity-60 pt-2">
-                                <span className='rounded-xl text-green-500 mr-2'><i class="fa-solid fa-download"></i> 9M</span>
-                                <span className='text-[#FF8811] rounded-xl mr-2'><i class="fa-solid fa-star"></i> 5</span>
-                                <span>258 MB</span>
-                            </div>
-                        </div>
-                        <button className="btn btn-success">Uninstall
-                        </button>
-                    </li>
-                    <li className="list-row bg-base-100 my-1">
-                        <div><img className="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
-                        <div>
-                            <div>Forest: Focus for Productivity</div>
-                            <div className="text-xs uppercase font-semibold opacity-60 pt-2">
-                                <span className='rounded-xl text-green-500 mr-2'><i class="fa-solid fa-download"></i> 9M</span>
-                                <span className='text-[#FF8811] rounded-xl mr-2'><i class="fa-solid fa-star"></i> 5</span>
-                                <span>258 MB</span>
-                            </div>
-                        </div>
-                        <button className="btn btn-success">Uninstall
-                        </button>
-                    </li>
-                    <li className="list-row bg-base-100 my-1">
-                        <div><img className="size-10 rounded-box" src="https://img.daisyui.com/images/profile/demo/1@94.webp"/></div>
-                        <div>
-                            <div>Forest: Focus for Productivity</div>
-                            <div className="text-xs uppercase font-semibold opacity-60 pt-2">
-                                <span className='rounded-xl text-green-500 mr-2'><i class="fa-solid fa-download"></i> 9M</span>
-                                <span className='text-[#FF8811] rounded-xl mr-2'><i class="fa-solid fa-star"></i> 5</span>
-                                <span>258 MB</span>
-                            </div>
-                        </div>
-                        <button className="btn btn-success">Uninstall
-                        </button>
-                    </li>
-                    
-                    
+
+                    {
+                        selectedApps.map((app) => <InstallList app={app} key={app.id} handleUninstallApp={handleUninstallApp}></InstallList>)
+                    }
+
                 </ul>
             </div>
         </div>
