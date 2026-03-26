@@ -2,7 +2,7 @@ import React from 'react';
 import SingleApp from '../SingleApp/SingleApp';
 
 const Trending = ({visibleApps}) => {
-    console.log(visibleApps)
+    // console.log(visibleApps)
     return (
         <>
             
