@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { getAppFromLocalStorage, removeAppFromLocalStorage } from '../../utility/storage';
 import InstallList from '../../components/InstallList/InstallList';
 import { useLoaderData } from 'react-router';
+import {toast } from 'react-toastify';
 
 const Installation = () => {
     const data = useLoaderData()
@@ -16,6 +17,7 @@ const Installation = () => {
         removeAppFromLocalStorage(id)
         setInstallAppList(newInstallAppList)
         // console.log(newInstallAppList)
+        toast('Uninstall Successful')
     }
     return (
         <div className='bg-gray-100'>

@@ -11,6 +11,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <PageNotFound />,
     children: [
       { 
         index: true, 
@@ -31,10 +32,6 @@ const router = createBrowserRouter([
         path: "/installation", 
         loader: () => fetch('apps.json'), 
         element: <Suspense fallback={`load hocce vai`}><Installation></Installation></Suspense>
-      },
-      { 
-        path: "404", 
-        Component: PageNotFound 
       },
     ],
   },

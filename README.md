@@ -75,29 +75,29 @@
   - Image
   - Download count
   - Average rating
-- Clicking on a card should navigate the user to the App Details page.
-- Include a “Show All” button that navigates to the All Apps page.
+- Clicking on a card should navigate the user to the App Details page. -- done
+- Include a “Show All” button that navigates to the All Apps page. --- done 
 
 ---
 
 ## 3.📱 All Apps Page
 
-#### Title Section
+#### Title Section 
 
-- Include a title and subtitle following the Figma design.
+- Include a title and subtitle following the Figma design. --- done
 
 #### Search and States
 
-- Display the total number of apps on the left and a search bar on the right.
-- `Implement live search functionality`
+- Display the total number of apps on the left and a search bar on the right. --- done 
+- `Implement live search functionality` --- no done
   - filters apps by title as the user types.
   - Search will be case-insensitive
   - If no app matches, display a “No App Found” message.
 
 #### App Section
 
-- Display all apps from the JSON data.
-- Each app card should include:
+- Display all apps from the JSON data. --- done 
+- Each app card should include: --- done
   - App title
   - Image
   - Download count
@@ -110,20 +110,20 @@
 
 #### App Information
 
-- Show app image on the left.
-- Display app details such as title, rating, downloads, reviews.
-- Include an `Install button`:
-  - When clicked, it becomes disabled and the text changes to `Installed`.
-  - Show a Success Toast after App installed
+- Show app image on the left. --- done
+- Display app details such as title, rating, downloads, reviews. --- done
+- Include an `Install button`: done
+  - When clicked, it becomes disabled and the text changes to `Installed`. --- done 
+  - Show a Success Toast after App installed --- done
 
-#### App Review Chart
+#### App Review Chart ----- no no no done
 
 - Implement a responsive chart using the **Recharts** library.
 - Visualize the app’s review data as shown in the Figma design.
 
 #### App Description
 
-- Show the app details in description section as per Figma layout.
+- Show the app details in description section as per Figma layout. --- done 
 
 ---
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { addAppToLocalStorage, getAppFromLocalStorage } from '../../utility/storage';
+import {toast } from 'react-toastify';
 
 const AppDetails = () => {
     const {id} = useParams()
@@ -16,7 +17,7 @@ const AppDetails = () => {
         addAppToLocalStorage(id)
         const store = [...install, id]
         setInstall(store)
-        alert(" added")
+        toast("App installed")
     }
     return (
         <div className='bg-gray-100'>
