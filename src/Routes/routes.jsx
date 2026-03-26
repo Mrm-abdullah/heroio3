@@ -1,12 +1,13 @@
-import React, { Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { createBrowserRouter } from "react-router"
 import Root from '../components/Root';
-import Home from '../pages/Home/Home';
-import Installation from '../pages/Installation/Installation';
 import PageNotFound from '../pages/PageNotFound/PageNotFound';
-import AllApps from '../pages/AllApps/AllApps';
-import AppDetails from '../components/AppDetails/AppDetails';
+import Loader from '../components/Loader/Loader';
 
+const Home = lazy(() => import('../pages/Home/Home'))
+const AllApps = lazy(() => import('../pages/AllApps/AllApps'))
+const AppDetails = lazy(() => import('../components/AppDetails/AppDetails'))
+const Installation = lazy(() => import('../pages/Installation/Installation'))
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,22 +17,22 @@ const router = createBrowserRouter([
       { 
         index: true, 
         loader: () => fetch('apps.json'), 
-        element: <Suspense fallback={`load hocce vai`}><Home></Home></Suspense>
+        element: <Suspense fallback={<Loader></Loader>}><Home></Home></Suspense>
       },
       { 
         path: "/app", 
         loader: () => fetch('apps.json'), 
-        element: <Suspense fallback={`load hocce vai`}><AllApps></AllApps></Suspense>
+        element: <Suspense fallback={<Loader></Loader>}><AllApps></AllApps></Suspense>
       },
       { 
         path: "/appDetails/:id", 
         loader: () => fetch('apps.json'), 
-        element: <Suspense fallback={`load hocce vai`}><AppDetails></AppDetails></Suspense>
+        element: <Suspense fallback={<Loader></Loader>}><AppDetails></AppDetails></Suspense>
       },
       { 
         path: "/installation", 
         loader: () => fetch('apps.json'), 
-        element: <Suspense fallback={`load hocce vai`}><Installation></Installation></Suspense>
+        element: <Suspense fallback={<Loader></Loader>}><Installation></Installation></Suspense>
       },
     ],
   },

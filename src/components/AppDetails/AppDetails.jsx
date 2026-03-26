@@ -6,12 +6,13 @@ import {toast } from 'react-toastify';
 const AppDetails = () => {
     const {id} = useParams()
     const data = useLoaderData()
-    const singleApp = data.find(app => app.id === parseInt(id))
+    console.log('okk', data)
+    const singleApp = data?.find(app => parseInt(app.id) === parseInt(id))
     // console.log(singleApp)
     const installApp = getAppFromLocalStorage()
     // console.log(installApp)
-    const [install, setInstall] = useState([...installApp])
-    const a = install.find(a => a === id)
+    const [install, setInstall] = useState(installApp || [])
+    const a = install.find(a => a === parseInt(id))
 
     const handleInstallApp = (id) => {
         addAppToLocalStorage(id)

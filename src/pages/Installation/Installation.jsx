@@ -6,6 +6,7 @@ import {toast } from 'react-toastify';
 
 const Installation = () => {
     const data = useLoaderData()
+    // console.log(data)
     const installList = getAppFromLocalStorage()
     const selectedApps = data.filter(app => installList.includes(String(app.id)))
     const [installAppList, setInstallAppList] = useState([...selectedApps])

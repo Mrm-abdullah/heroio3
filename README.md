@@ -129,11 +129,11 @@
 
 ## 5. Error Page & Others
 
-- Create a custom error page for invalid routes.
+- Create a custom error page for invalid routes. --- done 
 
-- Show a loading animation during: `Challenge Part`  
+- Show a loading animation during: `Challenge Part` --- done 
 
-  - Page navigation. 
+  - Page navigation. --- no done
   - Search operation.
 
 - Show a Relevant Not Found message app not found in app details section.
